@@ -8,6 +8,8 @@ exclude_dir = ["vendor"]
 include_ext = ["go", "tpl", "tmpl", "html"]
 exclude_file = ["*_test.go"]
 force_bin = true
+poll = true  # <-- ADD THIS LINE
+
 
 [log]
 level = "debug"
