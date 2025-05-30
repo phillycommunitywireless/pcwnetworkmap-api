@@ -2,6 +2,8 @@
 
 This repo is the API that [`pcwnetworkmap`](https://github.com/phillycommunitywireless/pcwnetworkmap) calls to retrieve features, formatted as geojson.
 
+Deploy previews via `Render`
+
 ## Files 
 * `main.go` - init webserver, handlers for routes. 
 * `processor.go`- helper functions for performing processing on the queried spreadsheet results 
