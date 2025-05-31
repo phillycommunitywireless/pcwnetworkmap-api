@@ -38,10 +38,16 @@ func main() {
 	e.GET("/get_level2", func(c echo.Context) error { return handleGetLevel2(c, sheetsService) })
 	e.GET("/get_level3", func(c echo.Context) error { return handleGetLevel3(c, sheetsService) })
 
+	e.GET("/thisisatest", handleTest)
+
 	// Start server
 	port := os.Getenv("PORT")
 	address := ":" + port
 	e.Logger.Fatal(e.Start(address))
+}
+
+func handleTest(c echo.Context) error {
+	return c.String(http.StatusOK, "Happy Friday!")
 }
 
 // Handlers
