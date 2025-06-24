@@ -25,6 +25,7 @@ func get_sheet_values(service *sheets.Service, sheet_name string) *sheets.ValueR
 	).Do()
 
 	if err != nil {
+		log.Println(err)
 		return nil
 	} else {
 		return sheet
@@ -195,13 +196,13 @@ func process_networkpoints(values *sheets.ValueRange) []networkpoint {
 
 	for _, row := range sliced {
 		networkpoint_properties := networkpoint_properties{
-			Name:           row[1].(string),
-			Id:             row[2].(string),
-			Street_address: row[3].(string),
-			Feature_type:   row[4].(string),
-			Image:          row[5].(string),
-			Latitude:       row[6].(string),
-			Longitude:      row[7].(string),
+			Name:         row[1].(string),
+			Id:           row[2].(string),
+			Feature_type: row[4].(string),
+			Image:        row[5].(string),
+			Latitude:     row[6].(string),
+			Longitude:    row[7].(string),
+			Year:         row[11].(string),
 		}
 
 		// coordinates_inner := []int{row[9].(int), row[10].(int)}

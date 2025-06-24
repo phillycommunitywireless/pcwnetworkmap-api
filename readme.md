@@ -18,6 +18,6 @@ See `env_file_schema.md` for required environment variables
 * See the golang documentation for [writing tests](https://go.dev/doc/tutorial/add-a-test) for more information. 
 
 ## Editing this repository 
-* build the container - `docker compose build .`
-* run the container - `docker compose up -d`
+* build the container - `docker build . -t pcwnetworkmap-api`
+* run the container - `docker run --rm -d -p 8080:8080 --name "api" -v .:/api pcwnetworkmap-api`
 * test API responses with `curl`, etc. 

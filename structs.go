@@ -31,13 +31,13 @@ type crs_properties struct {
 }
 
 type networkpoint_properties struct {
-	Name           string `json:"name"`
-	Id             string `json:"id"`
-	Street_address string `json:"street_address"`
-	Image          string `json:"Image"`
-	Feature_type   string `json:"type"`
-	Latitude       string `json:"latitude"`
-	Longitude      string `json:"longitude"`
+	Name         string `json:"name"`
+	Id           string `json:"id"`
+	Image        string `json:"Image"`
+	Feature_type string `json:"type"`
+	Latitude     string `json:"latitude"`
+	Longitude    string `json:"longitude"`
+	Year         string `json:"year"`
 }
 
 type networkpoint_geometry struct {
