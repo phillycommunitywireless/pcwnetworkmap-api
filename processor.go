@@ -41,17 +41,14 @@ func process_level1(values *sheets.ValueRange) []level1_point {
 
 	for _, row := range sliced {
 		level1point_properties := level1_properties{
-			Fid:           row[1].(string),
-			Qc_id:         row[2].(string),
-			Name:          row[3].(string),
-			Description:   row[4].(string),
-			Hs_id:         row[5].(string),
-			Rt_id:         row[6].(string),
-			Fid_2:         row[7].(string),
-			Qc_id_2:       row[8].(string),
-			Name_2:        row[9].(string),
-			Description_2: row[10].(string),
-			Hs_id_2:       row[11].(string),
+			Fid:       row[1].(string),
+			Qc_id:     row[2].(string),
+			Hs_id:     row[5].(string),
+			Rt_id:     row[6].(string),
+			Fid_2:     row[7].(string),
+			Hs_id_2:   row[11].(string),
+			Year:      row[19].(string),
+			Line_type: row[20].(string),
 		}
 
 		latitude, err := strconv.ParseFloat(row[13].(string), 64) // Parse as float64
@@ -117,17 +114,15 @@ func process_level2_level3(values *sheets.ValueRange) []level2_3_point {
 
 	for _, row := range sliced {
 		properties := level2_3_properties{
-			Fid:           row[1].(string),
-			Qc_id:         row[2].(string),
-			Name:          row[3].(string),
-			Description:   row[4].(string),
-			Hs_id:         row[5].(string),
-			Rt_id:         row[6].(string),
-			Fid_2:         row[7].(string),
-			Qc_id_2:       row[8].(string),
-			Name_2:        row[9].(string),
-			Description_2: row[10].(string),
-			Rt_id_2:       row[11].(string),
+			Fid:       row[1].(string),
+			Qc_id:     row[2].(string),
+			Hs_id:     row[5].(string),
+			Rt_id:     row[6].(string),
+			Fid_2:     row[7].(string),
+			Qc_id_2:   row[8].(string),
+			Rt_id_2:   row[11].(string),
+			Year:      row[19].(string),
+			Line_type: row[20].(string),
 		}
 
 		latitude, err := strconv.ParseFloat(row[13].(string), 64) // Parse as float64

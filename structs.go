@@ -58,17 +58,15 @@ type level1_point struct {
 }
 
 type level1_properties struct {
-	Fid           string `json:"fid"`
-	Qc_id         string `json:"qc_id`
-	Name          string `json:"name"`
-	Description   string `json:"description"`
-	Hs_id         string `json:"hs_id"`
-	Rt_id         string `json:"rt_id"`
-	Fid_2         string `json:"fid_2"`
-	Qc_id_2       string `json:"qc_id_2"`
-	Name_2        string `json:"name_2"`
-	Description_2 string `json:"description_2"`
-	Hs_id_2       string `json:"hs_id_2"`
+	Fid     string `json:"fid"`
+	Qc_id   string `json:"qc_id"`
+	Hs_id   string `json:"hs_id"`
+	Rt_id   string `json:"rt_id"`
+	Fid_2   string `json:"fid_2"`
+	Hs_id_2 string `json:"hs_id_2"`
+	Year    string `json:"year"`
+	// Separate from type of GeoJson objects ("Feature"), the type of line for layer filtering
+	Line_type string `json:"line_type"`
 }
 
 type level1_geometry struct {
@@ -83,17 +81,15 @@ type level2_3_point struct {
 }
 
 type level2_3_properties struct {
-	Fid           string `json:"fid"`
-	Qc_id         string `json:"qc_id`
-	Name          string `json:"name"`
-	Description   string `json:"description"`
-	Hs_id         string `json:"hs_id"`
-	Rt_id         string `json:"rt_id"`
-	Fid_2         string `json:"fid_2"`
-	Qc_id_2       string `json:"qc_id_2"`
-	Name_2        string `json:"name_2"`
-	Description_2 string `json:"description_2"`
-	Rt_id_2       string `json:"rt_id_2"`
+	Fid       string `json:"fid"`
+	Qc_id     string `json:"qc_id"`
+	Hs_id     string `json:"hs_id"`
+	Rt_id     string `json:"rt_id"`
+	Fid_2     string `json:"fid_2"`
+	Qc_id_2   string `json:"qc_id_2"`
+	Rt_id_2   string `json:"rt_id_2"`
+	Year      string `json:"year"`
+	Line_type string `json:"line_type"`
 }
 
 type level2_3_geometry struct {
