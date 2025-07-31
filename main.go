@@ -37,6 +37,7 @@ func main() {
 	e.GET("/get_level1", func(c echo.Context) error { return handleGetLevel1(c, sheetsService) })
 	e.GET("/get_level2", func(c echo.Context) error { return handleGetLevel2(c, sheetsService) })
 	e.GET("/get_level3", func(c echo.Context) error { return handleGetLevel3(c, sheetsService) })
+	e.GET("/get_level4", func(c echo.Context) error { return handleGetLevel4(c, sheetsService) })
 
 	// Start server
 	port := os.Getenv("PORT")
@@ -73,6 +74,13 @@ func handleGetLevel2(c echo.Context, sheetsService *sheets.Service) error {
 
 func handleGetLevel3(c echo.Context, sheetsService *sheets.Service) error {
 	sheet_values := get_sheet_values(sheetsService, "level3")
+	networkpoints := process_level2_level3(sheet_values)
+	shelled := prep_for_export_level2_3(networkpoints)
+	return c.JSON(http.StatusOK, shelled)
+}
+
+func handleGetLevel4(c echo.Context, sheetsService *sheets.Service) error {
+	sheet_values := get_sheet_values(sheetsService, "level4")
 	networkpoints := process_level2_level3(sheet_values)
 	shelled := prep_for_export_level2_3(networkpoints)
 	return c.JSON(http.StatusOK, shelled)
