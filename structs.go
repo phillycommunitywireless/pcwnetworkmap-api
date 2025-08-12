@@ -38,6 +38,7 @@ type networkpoint_properties struct {
 	Latitude     string `json:"latitude"`
 	Longitude    string `json:"longitude"`
 	Year         string `json:"year"`
+	AP_type      string `json:"ap_type"`
 }
 
 type networkpoint_geometry struct {

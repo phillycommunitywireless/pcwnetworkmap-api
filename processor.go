@@ -198,6 +198,7 @@ func process_networkpoints(values *sheets.ValueRange) []networkpoint {
 			Latitude:     row[6].(string),
 			Longitude:    row[7].(string),
 			Year:         row[11].(string),
+			AP_type:      row[12].(string),
 		}
 
 		// coordinates_inner := []int{row[9].(int), row[10].(int)}
