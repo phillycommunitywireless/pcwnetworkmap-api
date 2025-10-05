@@ -33,7 +33,7 @@ type crs_properties struct {
 type networkpoint_properties struct {
 	Name         string `json:"name"`
 	Id           string `json:"id"`
-	Image        string `json:"Image"`
+	Image        string `json:"image"`
 	Feature_type string `json:"type"`
 	Latitude     string `json:"latitude"`
 	Longitude    string `json:"longitude"`
