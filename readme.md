@@ -32,6 +32,11 @@ Base URL for all requests is [https://pcwnetworkmap-api.onrender.com](https://pc
 ## GET /get_networkpoints
 Returns all network access point locations as a GeoJSON FeatureCollection of Point features. "NetworkPoints" are routers and APs (wired and mesh). 
 
+Request: 
+```
+curl https://pcwnetworkmap-api.onrender.com/get_networkpoints
+```
+
 Response:
 ```
 {
@@ -69,6 +74,11 @@ Response:
 ## GET /get_level1
 Returns high site to router links as a GeoJSON FeatureCollection of LineString features
 
+Request: 
+```
+curl https://pcwnetworkmap-api.onrender.com/get_level1
+```
+
 Response:
 ```
 {
@@ -103,6 +113,13 @@ Response:
 
 ## GET /get_level2 / GET /get_level3 / GET /get_level4
 Returns level 2 (access points wired to a router), 3 (mesh nodes), and 4 (ptp/ptmp bridge) connections respectively. 
+
+Request: 
+```
+curl https://pcwnetworkmap-api.onrender.com/get_level2
+curl https://pcwnetworkmap-api.onrender.com/get_level3
+curl https://pcwnetworkmap-api.onrender.com/get_level4
+```
 
 Response:
 
