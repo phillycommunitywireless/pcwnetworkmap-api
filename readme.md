@@ -2,7 +2,7 @@
 
 Read-only REST API that serves GeoJSON data for the [`Philadelphia Community Wireless network infrastructure map`](https://github.com/phillycommunitywireless/pcwnetworkmap). 
 
-Deploy previews via `Render`
+Deploy previews via `Render` (manually - add the 'render-preview' label to a branch to generate a preview
 
 Live API available [here](https://pcwnetworkmap-api.onrender.com)
 
